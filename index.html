@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Lost & Found Portal</title>
+<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+<div class="hero">
+
+<div class="overlay"></div>
+
+<img class="title" src="MCMLOGO.svg">
+
+<button id="adminBtn" class="admin-btn">Admin</button>
+
+<div class="container">
+
+<a href="report-lost.html" class="card-link">
+<div class="Lost">
+<img src="magnifying-glass (1).png" class="icon">
+<h2>Lost</h2>
+</div>
+</a>
+
+<a href="report-found.html" class="card-link">
+<div class="Found">
+<img src="searching (1).png" class="icon">
+<h2>Found</h2>
+</div>
+</a>
+
+</div>
+</div>
+
+
+<!-- ADMIN LOGIN MODAL -->
+<div id="adminModal" class="modal">
+
+<div class="modal-content">
+
+<h3>Admin Login</h3>
+
+<input type="password" id="adminPassword" placeholder="Enter admin password">
+
+<button onclick="checkAdmin()">Login</button>
+
+<button class="cancel-btn" onclick="closeAdminModal()">Cancel</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

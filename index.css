@@ -1,0 +1,285 @@
+:root {
+  --mmcm-red: #E31E24;
+  --mmcm-white: #FFFFFF;
+  --mmcm-gray: #F4F4F4;
+}
+
+/* Hero Section Fullscreen */
+.hero {
+  position: relative;
+  height: 100vh; /* fullscreen height */
+  width: 100vw;  /* full width */
+  background-image: url("MCM.jpg");
+  background-size: cover;      /* cover the entire hero */
+  background-position: center; /* center the image */
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;  /* stack logo + buttons vertically */
+  align-items: center;
+  justify-content: center;
+  filter: blur(0);
+}
+
+/* optional overlay */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(237, 235, 235, 0.544);
+  z-index: 1;
+  pointer-events: none;  /* ADD THIS LINE */
+}
+/* Logo */
+.title {
+  position: relative;
+  z-index: 2; /* above overlay */
+  width: 300px;
+  height: auto;
+}
+
+/* Buttons container */
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  margin-top: 40px; /* distance from logo */
+  z-index: 2; /* above overlay */
+}
+
+/* Buttons style */
+.Lost, .Found {
+  width: 220px;
+  padding: 35px;
+  border-radius: 12px;
+  text-align: center;
+  background: #E31E24; /* stands out against the background */
+  color: #f8f5f5; /* use MMCM red as accent */
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.Lost:hover, .Found:hover {
+  background: #f8f5f5;
+  color: #E31E24;
+  transform: scale(1.05);
+  
+}
+/* Icons */
+.icon {
+  width: 80px;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+/* Remove body margin so hero truly fills screen */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.icon {
+  width: 80px;
+  display: block;
+  margin: 0 auto 10px auto;
+  filter: brightness(0) invert(1); /* makes red icon appear white */
+  transition: filter 0.3s ease;   /* smooth transition for hover */
+}
+
+.Lost:hover .icon,
+.Found:hover .icon {
+  filter: invert(27%) sepia(96%) saturate(6000%) hue-rotate(345deg) brightness(95%) contrast(90%);
+}
+
+.admin-btn{
+position:fixed;   /* change from absolute */
+top:20px;
+right:20px;
+padding:10px 18px;
+background:#C90000;
+color:white;
+border:none;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+z-index: 9999;    /* VERY IMPORTANT */
+}
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+justify-content:center;
+align-items:center;
+}
+
+.modal-content{
+background:white;
+padding:30px;
+border-radius:10px;
+text-align:center;
+width:300px;
+}
+
+.modal-content input{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+.modal-content button{
+width:100%;
+padding:10px;
+margin-top:5px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+
+.cancel-btn{
+background:gray;
+color:white;
+}
+
+.status{
+padding:6px 12px;
+font-weight:bold;
+border-radius:6px;
+display:inline-block;
+margin-bottom:10px;
+color:white;
+}
+
+.status.lost{
+background:#E31E24;
+}
+
+.status.found{
+background:#2ecc71;
+}
+
+/* ----------------------------- */
+/* GLOBAL PAGE FADE IN */
+/* ----------------------------- */
+
+body{
+opacity:0;
+animation:pageFade 0.4s ease forwards;
+}
+
+@keyframes pageFade{
+from{
+opacity:0;
+transform:translateY(8px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+
+
+/* ----------------------------- */
+/* LOST / FOUND BUTTON HOVER */
+/* ----------------------------- */
+
+.Lost, .Found{
+
+transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+}
+
+.Lost:hover, .Found:hover{
+
+transform: translateY(-4px) scale(1.03);
+box-shadow:0 8px 18px rgba(0,0,0,0.15);
+
+}
+
+
+
+/* ----------------------------- */
+/* ICON HOVER */
+/* ----------------------------- */
+
+.icon{
+
+transition: transform 0.25s ease;
+
+}
+
+.icon:hover{
+
+transform:scale(1.08);
+
+}
+
+
+
+/* ----------------------------- */
+/* ITEM CARD ANIMATION */
+/* ----------------------------- */
+
+.item-card{
+
+opacity:0;
+transform:translateY(10px);
+animation:itemFade 0.35s ease forwards;
+
+}
+
+@keyframes itemFade{
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+
+/* ----------------------------- */
+/* IMAGE HOVER EFFECT */
+/* ----------------------------- */
+
+.item-image{
+
+transition: transform 0.3s ease;
+
+}
+
+.item-image:hover{
+
+transform:scale(1.05);
+
+}
+
+
+
+/* ----------------------------- */
+/* LOST OPTIONS POPUP ANIMATION */
+/* ----------------------------- */
+
+#lostOptions{
+
+opacity:0;
+transform:translateY(-10px);
+transition: opacity 0.25s ease, transform 0.25s ease;
+
+}
+
+#lostOptions.show{
+
+opacity:1;
+transform:translateY(0);
+
+}
+

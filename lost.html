@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lost Items</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Back Button -->
+<div style="text-align:left; margin:20px;">
+<button onclick="window.location.href='index.html'" class="back-btn">
+← Back
+</button>
+</div>
+
+<h1>Lost Items</h1>
+
+<a href="report-lost.html">
+<button class="report-btn">Report Lost Item</button>
+</a>
+
+<div id="lostItems" class="items-container"></div>
+
+<script src="script.js"></script>
+<script>
+loadItems("lost");
+</script>
+
+</body>
+</html>

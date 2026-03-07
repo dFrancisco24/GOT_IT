@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Report Found Item</title>
+<link rel="stylesheet" href="report-found.css">
+</head>
+
+<body>
+
+<header class="header">
+<img class="logo" src="MCMLOGO.svg">
+</header>
+
+<div class="desc">
+<h2 class="text">Report a Found Item</h2>
+</div>
+
+<div class="form">
+<form id="itemForm">
+
+<p class="imp">Item Name</p>
+<input type="text" id="name" class="itemnamearea" required>
+
+<p class="imp">Description</p>
+<textarea id="description" class="descriptionarea"></textarea>
+
+<p class="imp">Category</p>
+<select id="category" class="options" required>
+<option value="" disabled selected>Select Category</option>
+<option>Wallet</option>
+<option>Electronics</option>
+<option>Bag</option>
+<option>Accessory</option>
+<option>Personal Item</option>
+<option>Keys</option>
+<option>Clothing</option>
+<option>Other</option>
+</select>
+
+<p class="imp">Location Found</p>
+<select id="location" class="options" required>
+<option value="" disabled selected>Select Location</option>
+<option>Library</option>
+<option>Cafeteria</option>
+<option>Plaza</option>
+<option>Auditorium</option>
+<option>Computer Lab</option>
+<option>Restroom</option>
+</select>
+
+<p class="imp">Date Found</p>
+<input id="date" class="dateinp" type="date" required>
+
+<p class="imp">Contact</p>
+<input type="text" id="contact" class="contactarea" required>
+
+<p class="imp">Upload Image</p>
+<input type="file" id="itemImage" accept="image/*" required>
+
+<div class="buttons">
+<button type="submit" class="submit">Submit Report</button>
+<button type="button" class="cancel" onclick="window.location.href='index.html?status=found'">Cancel</button>
+</div>
+
+</form>
+</div>
+
+<script src="script.js"></script>
+<script>
+handleForm("found", "index.html?status=found");
+</script>
+
+</body>
+</html>

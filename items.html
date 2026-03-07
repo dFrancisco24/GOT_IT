@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Items</title>
+<link rel="stylesheet" href="lost.css">
+</head>
+
+<body>
+
+<div style="padding:20px;">
+<button onclick="window.location.href='index.html'" class="back-btn">
+← Back
+</button>
+</div>
+
+<header class="header">
+<img src="MCMLOGO.svg" class="logo">
+<h2 id="pageTitle"></h2>
+</header>
+
+<div class="top-bar">
+<input type="text" id="searchInput" placeholder="Search items..." onkeyup="searchItem()">
+</div>
+
+<div id="results" class="items-grid"></div>
+
+<script src="script.js"></script>
+
+<script>
+
+document.getElementById("pageTitle").innerText="Lost & Found Items";
+
+loadItems();
+
+</script>
+
+<!-- IMAGE MODAL -->
+<div id="imageModal" class="modal">
+
+<div class="modal-box">
+
+<span class="close" onclick="closeImageModal()">&times;</span>
+
+<img class="modal-content" id="modalImg">
+
+<div id="modalDetails"></div>
+
+</div>
+
+</div>
+
+</body>
+</html>

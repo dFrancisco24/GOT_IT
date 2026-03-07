@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1 style="text-align:center;">Admin Dashboard</h1>
+
+<div style="text-align:center; margin-bottom:20px;">
+<button onclick="showSection('lost')">View Lost</button>
+<button onclick="showSection('found')">View Found</button>
+<button onclick="logout()">Logout</button>
+</div>
+
+<div id="adminResults" class="items-grid"></div>
+
+<script src="script.js"></script>
+
+<script>
+
+// 🔒 Protect the page
+if(localStorage.getItem("isAdmin") !== "true"){
+alert("Access denied");
+window.location.href = "index.html";
+}
+
+
+// ==============================
+// SHOW LOST / FOUND ITEMS
+// ==============================
+
+function showSection(type){
+
+let items = JSON.parse(localStorage.getItem(type + "Items")) || [];
+
+let container = document.getElementById("adminResults");
+
+container.innerHTML = "";
+
+if(items.length === 0){
+
+container.innerHTML = "<p style='text-align:center;'>No items found</p>";
+
+return;
+
+}
+
+items.forEach((item,index)=>{
+
+container.innerHTML += `
+
+<div class="item-card">
+
+<div class="status ${type}">
+${type.toUpperCase()}
+</div>
+
+${item.image ? `
+<img src="${item.image}" class="item-image">
+` : ""}
+
+<div class="item-info">
+
+<h3>${item.name}</h3>
+
+<p><b>Description:</b> ${item.description}</p>
+<p><b>Category:</b> ${item.category}</p>
+<p><b>Location:</b> ${item.location}</p>
+<p><b>Date:</b> ${item.date}</p>
+<p><b>Contact:</b> ${item.contact}</p>
+
+<button onclick="deleteItem('${type}',${index})" class="delete-btn">
+Delete Item
+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+}
+
+
+// ==============================
+// ADMIN DELETE (SECURED)
+// ==============================
+
+function deleteItem(type,index){
+
+const isAdmin = localStorage.getItem("isAdmin") === "true";
+
+if(!isAdmin){
+
+alert("Only admin can delete items.");
+
+return;
+
+}
+
+let items = JSON.parse(localStorage.getItem(type + "Items")) || [];
+
+items.splice(index,1);
+
+localStorage.setItem(type + "Items",JSON.stringify(items));
+
+showSection(type);
+
+}
+
+
+// ==============================
+// ADMIN LOGOUT
+// ==============================
+
+function logout(){
+
+localStorage.removeItem("isAdmin");
+
+window.location.href="index.html";
+
+}
+
+</script>
+
+</body>
+</html>
