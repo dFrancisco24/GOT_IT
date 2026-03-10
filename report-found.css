@@ -77,13 +77,13 @@ padding:0;
     border-radius: 5px;
     background-color: #F9FAFB;
     padding: 1.5%;
-    width: 97%;             /* responsive width */
-    max-width: 600px;       /* prevents it from getting too wide on large screens */
-    height: 150px;          /* fixed height */
+    width: 97%;             
+    max-width: 600px;       
+    height: 150px;          
     color: rgb(56, 56, 56);
-    box-sizing: border-box; /* includes padding in width/height */
-    resize: none;           /* prevents user from resizing */
-    font-size: 16px;        /* optional: better text readability */
+    box-sizing: border-box; 
+    resize: none;           
+    font-size: 16px;        
 }
 .dateinp{
     border-radius: 5px;
@@ -96,13 +96,13 @@ padding:0;
     border-radius: 5px;
     background-color: #F9FAFB;
     padding: 1.5%;
-    width: 97%;             /* responsive width */
-    max-width: 600px;       /* prevents it from getting too wide on large screens */
-    height: 150px;          /* fixed height */
+    width: 97%;           
+    max-width: 600px;       
+    height: 150px;         
     color: rgb(56, 56, 56);
-    box-sizing: border-box; /* includes padding in width/height */
-    resize: none;           /* prevents user from resizing */
-    font-size: 16px;        /* optional: better text readability */
+    box-sizing: border-box; 
+    resize: none;           
+    font-size: 16px;       
 }
 .buttons{
     display:flex;
@@ -156,3 +156,4 @@ padding:0;
     background-color:#a2a2a2;
     transform:scale(1.05);
 }
+
