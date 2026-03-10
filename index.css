@@ -4,57 +4,57 @@
   --mmcm-gray: #F4F4F4;
 }
 
-/* Hero Section Fullscreen */
+
 .hero {
   position: relative;
-  height: 100vh; /* fullscreen height */
-  width: 100vw;  /* full width */
+  height: 100vh; 
+  width: 100vw;  
   background-image: url("MCM.jpg");
-  background-size: cover;      /* cover the entire hero */
-  background-position: center; /* center the image */
+  background-size: cover;      
+  background-position: center; 
   background-repeat: no-repeat;
 
   display: flex;
-  flex-direction: column;  /* stack logo + buttons vertically */
+  flex-direction: column;  
   align-items: center;
   justify-content: center;
   filter: blur(0);
 }
 
-/* optional overlay */
+
 .overlay {
   position: absolute;
   inset: 0;
   background: rgba(237, 235, 235, 0.544);
   z-index: 1;
-  pointer-events: none;  /* ADD THIS LINE */
+  pointer-events: none;  
 }
-/* Logo */
+
 .title {
   position: relative;
-  z-index: 2; /* above overlay */
+  z-index: 2; 
   width: 300px;
   height: auto;
 }
 
-/* Buttons container */
+
 .container {
   position: relative;
   display: flex;
   justify-content: center;
   gap: 200px;
-  margin-top: 40px; /* distance from logo */
-  z-index: 2; /* above overlay */
+  margin-top: 40px; 
+  z-index: 2; 
 }
 
-/* Buttons style */
+
 .Lost, .Found {
   width: 220px;
   padding: 35px;
   border-radius: 12px;
   text-align: center;
-  background: #E31E24; /* stands out against the background */
-  color: #f8f5f5; /* use MMCM red as accent */
+  background: #E31E24; 
+  color: #f8f5f5; 
   font-weight: bold;
   cursor: pointer;
   transition: 0.2s;
@@ -66,14 +66,14 @@
   transform: scale(1.05);
   
 }
-/* Icons */
+
 .icon {
   width: 80px;
   display: block;
   margin: 0 auto 10px auto;
 }
 
-/* Remove body margin so hero truly fills screen */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -93,7 +93,7 @@ body {
 }
 
 .admin-btn{
-position:fixed;   /* change from absolute */
+position:fixed;  
 top:20px;
 right:20px;
 padding:10px 18px;
@@ -103,7 +103,7 @@ border:none;
 border-radius:8px;
 font-weight:bold;
 cursor:pointer;
-z-index: 9999;    /* VERY IMPORTANT */
+z-index: 9999;    
 }
 
 .modal{
@@ -163,9 +163,7 @@ background:#E31E24;
 background:#2ecc71;
 }
 
-/* ----------------------------- */
-/* GLOBAL PAGE FADE IN */
-/* ----------------------------- */
+
 
 body{
 opacity:0;
@@ -186,9 +184,7 @@ transform:translateY(0);
 
 
 
-/* ----------------------------- */
-/* LOST / FOUND BUTTON HOVER */
-/* ----------------------------- */
+
 
 .Lost, .Found{
 
@@ -205,9 +201,7 @@ box-shadow:0 8px 18px rgba(0,0,0,0.15);
 
 
 
-/* ----------------------------- */
-/* ICON HOVER */
-/* ----------------------------- */
+
 
 .icon{
 
@@ -223,9 +217,7 @@ transform:scale(1.08);
 
 
 
-/* ----------------------------- */
-/* ITEM CARD ANIMATION */
-/* ----------------------------- */
+
 
 .item-card{
 
@@ -246,9 +238,7 @@ transform:translateY(0);
 
 
 
-/* ----------------------------- */
-/* IMAGE HOVER EFFECT */
-/* ----------------------------- */
+
 
 .item-image{
 
@@ -264,9 +254,7 @@ transform:scale(1.05);
 
 
 
-/* ----------------------------- */
-/* LOST OPTIONS POPUP ANIMATION */
-/* ----------------------------- */
+
 
 #lostOptions{
 
@@ -282,4 +270,5 @@ opacity:1;
 transform:translateY(0);
 
 }
+
 
