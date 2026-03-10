@@ -4,7 +4,7 @@ margin:0;
 background:#f4f6f8;
 }
 
-/* HEADER */
+
 
 .header{
 display:flex;
@@ -19,7 +19,7 @@ box-shadow:0 2px 10px rgba(0,0,0,0.08);
 height:45px;
 }
 
-/* SEARCH BAR */
+
 
 .top-bar{
 padding:20px;
@@ -34,7 +34,7 @@ border-radius:6px;
 border:1px solid #ccc;
 }
 
-/* GRID */
+
 
 .items-grid{
 display:grid;
@@ -43,7 +43,7 @@ gap:25px;
 padding:30px;
 }
 
-/* CARD */
+
 
 .item-card{
 background:white;
@@ -59,7 +59,7 @@ transform:translateY(-6px);
 box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* STATUS TAG */
+
 
 .status{
 position:absolute;
@@ -80,7 +80,7 @@ background:#e74c3c;
 background:#2ecc71;
 }
 
-/* IMAGE */
+
 
 .item-image{
 width:100%;
@@ -94,7 +94,7 @@ transition:transform 0.25s;
 transform:scale(1.05);
 }
 
-/* ITEM INFO */
+
 
 .item-info{
 padding:15px;
@@ -105,7 +105,7 @@ font-size:14px;
 margin-top:0;
 }
 
-/* MODAL */
+
 
 .modal{
 display:none;
@@ -141,7 +141,7 @@ float:right;
 cursor:pointer;
 }
 
-/* ANIMATION */
+
 
 @keyframes zoomIn{
 from{
@@ -154,7 +154,7 @@ opacity:1;
 }
 }
 
-/* BACK BUTTON */
+
 
 .back-btn{
 padding:8px 14px;
@@ -163,4 +163,5 @@ background:#444;
 color:white;
 border-radius:6px;
 cursor:pointer;
+
 }
