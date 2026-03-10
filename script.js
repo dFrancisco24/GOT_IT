@@ -1,6 +1,4 @@
-/* ==============================
-   HANDLE FOUND FORM (ADD ITEM)
-================================*/
+
 
 function handleForm(type, redirectPage){
 
@@ -42,9 +40,7 @@ window.location.href = redirectPage;
 }
 
 
-/* ==============================
-   SAVE FOUND ITEM
-================================*/
+
 
 function saveItem(type, imageData){
 
@@ -70,9 +66,7 @@ localStorage.setItem(type + "Items", JSON.stringify(items));
 }
 
 
-/* ==============================
-   LOST SEARCH ENGINE
-================================*/
+
 
 function searchFoundItems(){
 
@@ -96,7 +90,7 @@ item.location.includes(location)
 
 });
 
-/* SAVE RESULTS TEMPORARILY */
+
 
 localStorage.setItem("searchResults", JSON.stringify(matches));
 
@@ -105,9 +99,7 @@ window.location.href = "items.html";
 }
 
 
-/* ==============================
-   LOAD SEARCH RESULTS
-================================*/
+
 
 function loadItems(){
 
@@ -162,9 +154,7 @@ onclick='openImage(${JSON.stringify(item)})'>
 }
 
 
-/* ==============================
-   SEARCH BAR FILTER
-================================*/
+
 
 function searchItem(){
 
@@ -181,9 +171,7 @@ card.style.display = card.innerText.toLowerCase().includes(input) ? "block" : "n
 }
 
 
-/* ==============================
-   IMAGE MODAL
-================================*/
+
 
 function openImage(item){
 
@@ -217,9 +205,7 @@ if(modal) modal.style.display="none";
 }
 
 
-/* ==============================
-   ADMIN LOGIN
-================================*/
+
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -249,9 +235,7 @@ if(modal) modal.style.display="none";
 }
 
 
-/* ==============================
-   ADMIN PASSWORD
-================================*/
+
 
 function checkAdmin(){
 
@@ -268,5 +252,6 @@ window.location.href="admin-dashboard.html";
 alert("Wrong password");
 
 }
+
 
 }
