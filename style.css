@@ -3,14 +3,14 @@
   --mmcm-white: #FFFFFF;
   --mmcm-gray: #F4F4F4;
 }
-/* Hero section */
+
 .hero {
   position: relative;
-  height: 600px; /* fixed height for pre-scroll area */
+  height: 600px; 
   display: flex;
-  justify-content: center; /* center horizontally */
-  align-items: center;     /* center vertically */
-  background-image: url("MCM.jpg"); /* your background */
+  justify-content: center; 
+  align-items: center;    
+  background-image: url("MCM.jpg"); 
   background-size: cover;
   background-position: center;
 }
@@ -18,22 +18,22 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.6); /* semi-transparent white overlay */
+  background: rgba(255, 255, 255, 0.6); 
   z-index: 1;
 }
 
 .title {
   position: relative;
-  z-index: 2; /* above overlay */
-  width: 300px;  /* fixed width */
-  height: auto;  /* keeps proportions */
+  z-index: 2; 
+  width: 300px;  
+  height: auto;  
 }
 
-/* Page content below hero */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #fff; /* background after scroll is white */
+  background: #fff; 
   color: #333;
 }
 
@@ -179,7 +179,7 @@ background:#E31E24;
 background:#2ecc71;
 }
 
-/* PAGE FADE IN */
+
 body {
   opacity: 0;
   animation: fadeIn 0.4s ease forwards;
@@ -196,7 +196,7 @@ body {
   }
 }
 
-/* BUTTON TRANSITIONS */
+
 .Lost, .Found {
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -207,7 +207,7 @@ body {
   box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 
-/* IMAGE HOVER */
+
 .icon, .item-image {
   transition: transform 0.3s ease;
 }
@@ -227,4 +227,5 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+
 }
