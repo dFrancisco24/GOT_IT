@@ -22,16 +22,14 @@
 
 <script>
 
-// 🔒 Protect the page
+
 if(localStorage.getItem("isAdmin") !== "true"){
 alert("Access denied");
 window.location.href = "index.html";
 }
 
 
-// ==============================
-// SHOW LOST / FOUND ITEMS
-// ==============================
+
 
 function showSection(type){
 
@@ -88,9 +86,7 @@ Delete Item
 }
 
 
-// ==============================
-// ADMIN DELETE (SECURED)
-// ==============================
+
 
 function deleteItem(type,index){
 
@@ -115,9 +111,7 @@ showSection(type);
 }
 
 
-// ==============================
-// ADMIN LOGOUT
-// ==============================
+
 
 function logout(){
 
@@ -130,4 +124,5 @@ window.location.href="index.html";
 </script>
 
 </body>
+
 </html>
